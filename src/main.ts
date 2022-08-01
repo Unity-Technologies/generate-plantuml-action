@@ -11,7 +11,7 @@ import { retrieveCodes, getCommitsFromPayload, updatedFiles } from './utils';
 async function generateSvg(code) {
     const encoded = plantumlEncoder.encode(code);
     try {
-        const res = await axios.get(`http://www.plantuml.com/plantuml/svg/${encoded}`);
+        const res = await axios.get(`https://plantuml.ds.unity3d.com/svg/${encoded}`);
         return res.data;
     } catch(e) {
         // TODO
